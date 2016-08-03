@@ -10,6 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+<<<<<<< 10fc4746963366106302f8dbe861cf934a93cb9a
             Point p1 = new Point();
             p1.x = 1;
             p1.y = 3;
@@ -27,5 +28,16 @@ namespace Snake
             Console.ReadLine();
         }
               
+=======
+            Point p1 = new Point(1, 3, '*');
+            p1.Draw();
+
+            Point p2 = new Point(4, 5, '@');
+            p2.Draw();           
+            
+            Console.ReadLine();
+        }
+
+>>>>>>> e64f6693c7b6096c7fe31b5d58d8e2e48409e245
     }
 }

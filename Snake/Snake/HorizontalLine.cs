@@ -22,18 +22,7 @@ namespace Snake
                 pList.Add(p);
             }
            
-            /*Point p1 = new Point(4, 4, '*');
-            Point p2 = new Point(5, 4, '*');
-            Point p3 = new Point(6, 4, '*');
-            Point p4 = new Point(7, 4, '*');
-            Point p5 = new Point(8, 4, '*');
-
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
-            pList.Add(p5);*/
-
+        
         }
 
         // Метод для вывода линии на экран

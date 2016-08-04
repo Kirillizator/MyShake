@@ -17,8 +17,13 @@ namespace Snake
             p2.Draw();
 
 
-            HorizontalLine line = new HorizontalLine(5, 30, 8, '+');
-            line.Drow();
+            HorizontalLine upline = new HorizontalLine(1, 70, 1, '+');
+            upline.Drow();
+
+            HorizontalLine dwline = new HorizontalLine(1, 70, 20, '+');
+            dwline.Drow();
+
+
 
            
             Console.ReadLine();

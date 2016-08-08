@@ -8,7 +8,7 @@ namespace Snake
 {
     class VerticalLine
     {
-        List<Point> pList;
+        List<Point> pList; //Список точек
 
 
         public VerticalLine(int x, int yUp, int yDown, char sym)
@@ -20,7 +20,9 @@ namespace Snake
                 pList.Add(p);
             }
         }
-        public void Drow()
+
+
+        public void Drow() //Метод отображающий список точек
         {
             foreach (Point p in pList)
             {

@@ -27,11 +27,9 @@ namespace Snake
 
             // Отрисовка точки
             Point p = new Point(10, 10, '*');
-            p.Draw();
+            Snake snake = new Snake(p, 4, Direction.UP); // Змейка имеет координаты, длину и направление движения
+            snake.Drow();
            
-            Console.ReadLine();
         }
-
-
     }
 }

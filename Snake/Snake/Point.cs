@@ -8,12 +8,11 @@ namespace Snake
 {
     class Point
     {
-        // Данные класса
+
         public int x;
         public int y;
         public char sym;
 
-        // Конструкторы при помощи которых можно создавать различные точки
         public Point()
         {
         }
@@ -52,11 +51,16 @@ namespace Snake
             }
         }
 
-        // Методы которые можно вызывать для каждой конкретной точки
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public override string ToString()

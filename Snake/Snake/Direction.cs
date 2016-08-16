@@ -13,4 +13,5 @@ namespace Snake
         UP,
         DOWN
     }
+
 }

@@ -14,19 +14,20 @@ namespace Snake
             Console.SetBufferSize(80, 25); // Установить размер окна и убрать возможность перемотки
 
             // Отрисовка рамочки
-            HorizontalLine n_line = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine n_line = new HorizontalLine(0, 78, 0, '#');
             n_line.Drow();
 
-            HorizontalLine s_line = new HorizontalLine(0, 78, 24, '+');
+            HorizontalLine s_line = new HorizontalLine(0, 78, 24, '#');
             s_line.Drow();
 
-            VerticalLine w_line = new VerticalLine(0, 1, 23, '+');
+            VerticalLine w_line = new VerticalLine(0, 1, 23, '#');
             w_line.Drow();
 
-            VerticalLine o_line = new VerticalLine(78, 1, 23, '+');
+            VerticalLine o_line = new VerticalLine(78, 1, 23, '#');
             o_line.Drow();
 
-            // Отрисовка точки
+            // Отрисовка точки. 
+            // Рисуем змейку
             Point p = new Point(10, 10, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT); // Змейка имеет координаты, длину и направление движения
             snake.Drow();

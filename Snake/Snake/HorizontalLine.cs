@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class HorizontalLine : Figure // Горизонтальная линия наследуется от фигуры
+    class HorizontalLine : Figure 
     {
-        // Конструктор класса линии
-        public HorizontalLine(int xLeft, int xRight, int y, char sym) // параметры задающие длину и положение линии
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
             for(int x = xLeft; x <= xRight; x++)

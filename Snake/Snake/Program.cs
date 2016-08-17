@@ -11,26 +11,15 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25); // Установить размер окна и убрать возможность перемотки
+            Console.SetBufferSize(80, 25);
 
-            // Отрисовка рамочки
-            HorizontalLine n_line = new HorizontalLine(0, 78, 0, '#');
-            n_line.Drow();
-
-            HorizontalLine s_line = new HorizontalLine(0, 78, 24, '#');
-            s_line.Drow();
-
-            VerticalLine w_line = new VerticalLine(0, 1, 23, '#');
-            w_line.Drow();
-
-            VerticalLine o_line = new VerticalLine(78, 1, 23, '#');
-            o_line.Drow();
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
             // Отрисовка точки. 
-            // Рисуем змейку
             Point p = new Point(10, 10, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT); // Змейка имеет координаты, длину и направление движения
-            snake.Drow();
+            snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '%');
             Point food = foodCreator.CreateFood();
@@ -38,7 +27,11 @@ namespace Snake
 
             while (true)
             {
-                if (snake.Eat(food))
+                if(walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
+                if(snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
@@ -49,11 +42,10 @@ namespace Snake
                 }
 
                 Thread.Sleep(100);
-
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandleKey(key.Key); // Обработай нажатие ты ведь знаешь что делать
+                    snake.HandleKey(key.Key);
                 }
             }              
         }
